@@ -1,0 +1,81 @@
+.contact-content {
+  display: grid;
+  grid-template-columns: 35% 60%;
+  gap: 5%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: var(--color-variant-even);
+  border-radius: 0.3rem;
+  resize: none;
+  font-size: 1rem;
+}
+
+.contact-decoration {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.contact-decoration .icon {
+  position: absolute;
+}
+
+.mail-icon {
+  left: 5%;
+  top: 2%;
+  transform: rotate(-30deg);
+  font-size: 8rem;
+}
+
+.chat-icon {
+  left: 65%;
+  top: 28%;
+  transform: rotate(30deg);
+  font-size: 6rem;
+}
+
+.phone-icon {
+  left: 25%;
+  top: 50%;
+  font-size: 8rem;
+}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 600px) {
+  .contact-content {
+    display: block;
+  }
+  
+ .mail-icon {
+   left: 2rem;
+   top: 1rem;
+ } 
+
+ .chat-icon {
+   top: 8rem;
+ }
+
+ .phone-icon {
+   top: 15rem;
+ }
+
+ .contact-form {
+   backdrop-filter: blur(10px); 
+ }
+
+ .contact-form input, 
+ .contact-form textarea {
+   background-color: #D9D9D97a;
+ }
+}
