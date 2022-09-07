@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.98742304.css",
+    "main.js": "/react-portfolio/static/js/main.4bbbc32b.js",
+    "static/media/portfolio.png": "/react-portfolio/static/media/portfolio.027170602278fc42a9a3.png",
+    "static/media/bookerfly-1.png": "/react-portfolio/static/media/bookerfly-1.026091b5a0263ab9b913.png",
+    "static/media/nvim-config.png": "/react-portfolio/static/media/nvim-config.e198a390a5652e44e386.png",
+    "static/media/avatar.jpeg": "/react-portfolio/static/media/avatar.f50bae8e805f034289f1.jpeg",
+    "index.html": "/react-portfolio/index.html",
+    "main.98742304.css.map": "/react-portfolio/static/css/main.98742304.css.map",
+    "main.4bbbc32b.js.map": "/react-portfolio/static/js/main.4bbbc32b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98742304.css",
+    "static/js/main.4bbbc32b.js"
+  ]
+}
