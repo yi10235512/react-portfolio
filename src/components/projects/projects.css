@@ -6,23 +6,23 @@
 
 .project-item {
   background-color: var(--color-bg-even); 
-  border-radius: 2rem;
-  padding: 1.2rem;
+  border-radius: 1.8rem;
+  padding: 2rem;
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: max-content;
   box-shadow: 0 4px 4px rgba(0 0 0 / 10%)
 }
 
 .project-image {
-  border-radius: 2rem;
+  aspect-ratio: 4/3;
+  border-radius: 1rem;
   width: 100%;
   height: fit-content;
-  align-self: center;
   overflow: hidden;
 }
 
 .project-info {
-  margin: 1.2rem 2rem;
+  margin: 1rem 0.5rem 0;
   display: grid;
   grid-template-rows: 1.5fr 1fr;
 }
@@ -30,8 +30,9 @@
 .project-item-cta {
   display: flex;
   gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
 }
-
 
 @media screen and (max-width: 1280px) {
   .project-list {
@@ -39,8 +40,4 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .project-item {
-    grid-template-rows: 1.5fr 1fr;
-  }
-}
+@media screen and (max-width: 600px) {}

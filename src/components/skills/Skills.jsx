@@ -5,7 +5,7 @@ import { HiBadgeCheck } from "react-icons/hi";
 const skill_data = [
   {
     id: 1,
-    title: "Programming Language",
+    title: "Programming Languages",
     items: ["C/C++", "Python", "Java", "Javascript"]
   },
   {

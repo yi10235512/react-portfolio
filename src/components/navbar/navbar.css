@@ -1,5 +1,6 @@
 .header {
   position: sticky;
+  z-index: 1;
   background-color: var(--color-bg);
   height: 100px;
   top: 0;
@@ -26,29 +27,56 @@
   padding: 0 1rem;
 }
 
-#toggle {
-  display: none;
+.hamburger {
+  visibility: hidden;
 }
 
 .nav-items {
   display: flex;
 }
 
-.nav-items .nav-item {
+.nav-item {
   padding-left: 2rem;
 }
 
-
-@media screen and (max-width: 1024px) {
-  /* dev */
-  .logo {
-    background-color: red;
-  }
+.nav-item:hover::before {
+  visibility: visible;
+  left: -8px;
+  transition: var(--transition);
 }
 
+.nav-item::before {
+  visibility: hidden;
+  content: '';
+  border: solid var(--color-dark);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  left: -16px;
+  top: -4px;
+  position: relative;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.nav-item.active::before {
+  visibility: visible;
+  left: -8px;
+}
+
+@media screen and (max-width: 1024px) {}
+
 @media screen and (max-width: 600px) {
+  .header {
+    height: 80px;
+  }
+  
+  .hamburger {
+    visibility: visible; 
+  }
+
   .navbar {
-    max-width: 100%
+    max-width: 100%;
   }
 
   .nav-items {
@@ -59,7 +87,6 @@
     background-color: rgb(0 0 0 / 5%);
     width: 40%;
     height: fit-content;
-    z-index: 999;
     text-align: center;
     transition: var(--transition);
     backdrop-filter: blur(10px);
@@ -77,50 +104,5 @@
     padding: 0;
     box-shadow: 0 1px 1px rgb(0 0 0 / 20%);
     font-size: 1.5rem;
-  }
-
-  #toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #toggle::before {
-    content: '';
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background: var(--color-dark);
-    transform: translateY(-5px);
-    transition: 0.2s;
-  }
-
-  #toggle::after {
-    content: '';
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background: var(--color-dark);
-    transform: translateY(5px);
-    transition: 0.2s;
-  }
-
-  #toggle.active::before {
-    transform: translateY(0px) rotate(45deg);
-  }
-
-  #toggle.active::after {
-    transform: translateY(0px) rotate(-45deg);
-  }
-
-  /* dev */
-  .logo {
-    background-color: blue;
   }
 }

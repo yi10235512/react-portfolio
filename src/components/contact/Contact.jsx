@@ -4,7 +4,7 @@ import { BsEnvelope, BsChatText, BsTelephone } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-even">
+    <section id="contact" className="bg-even" >
       <div className="container contact-container">
         <h2>Get in Touch</h2>
         <h1>Contact Me</h1>
@@ -18,11 +18,11 @@ const Contact = () => {
             <input type="text" name="name" placeholder="Your Name*" required />
             <input type="text" name="email" placeholder="Your Email*" required />
             <textarea type="text" name="message" rows="10" placeholder="Your Message*" required ></textarea>
-            <button type="submit" className="btn">Send Message</button>
+            <button type="submit" className="btn btn-shadow">Send Message</button>
           </form>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
 

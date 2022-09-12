@@ -27,6 +27,7 @@
 }
 
 .contact-decoration .icon {
+  color: var(--color-title);
   position: absolute;
 }
 
@@ -57,25 +58,29 @@
     display: block;
   }
   
- .mail-icon {
-   left: 2rem;
-   top: 1rem;
- } 
+  .mail-icon {
+    left: 2rem;
+    top: 1rem;
+  } 
 
- .chat-icon {
-   top: 8rem;
- }
+  .chat-icon {
+    top: 8rem;
+  }
 
- .phone-icon {
-   top: 15rem;
- }
+  .phone-icon {
+    top: 12rem;
+  }
 
- .contact-form {
-   backdrop-filter: blur(10px); 
- }
+  .contact-form {
+    backdrop-filter: blur(10px); 
+    padding: 0 10px;
+    gap: 1rem; 
+  }
 
- .contact-form input, 
- .contact-form textarea {
-   background-color: #D9D9D97a;
- }
+  .contact-form input, 
+  .contact-form textarea {
+    background-color: #D9D9D9b5;
+    font-size: 0.7rem; 
+    padding: 1rem 1.5rem;
+  }
 }
