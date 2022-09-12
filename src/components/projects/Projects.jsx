@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./projects.css";
 import PROJECT_IMG_1 from "../../assets/project1.jpeg";
 import PROJECT_IMG_2 from "../../assets/project2.jpeg";
@@ -40,39 +40,36 @@ const project_data = [
   },
 ]
 
-const Projects = () => {
-  return (
-    <section id="projects">
-      <div className="container projects-container">
-        <h2>My Recent Work</h2>
-        <h1>Projects</h1>
-        <div className="project-list">
-          {
-            project_data.map(project => {
-              return (
-                <article className="project-item">
-                  <div className="project-image">
-                    <img src={project.image} alt={project.name} />
+const Projects = forwardRef((props, ref) => (
+  <section id="projects" ref={ref}>
+    <div className="container projects-container">
+      <h2>My Recent Work</h2>
+      <h1>Projects</h1>
+      <div className="project-list">
+        {
+          project_data.map(project => {
+            return (
+              <article key={project.id} className="project-item" >
+                <div className="project-image">
+                  <img src={project.image} alt={project.name} />
+                </div>
+                <div className="project-info">
+                  <div className="project-description">
+                    <h2>{project.name}</h2>
+                    <p>{project.description}</p>
                   </div>
-                  <div className="project-info">
-                    <div className="project-description">
-                      <h2>{project.name}</h2>
-                      <p>{project.description}</p>
-                    </div>
-                    <div className="project-item-cta">
-                      {project.github && <a href={project.github} className="btn btn-shadow" target="_blank">Github</a>}
-                      {project.figma && <a href={project.figma} className="btn btn-shadow" target="_blank">Figma</a>}
-                    </div>
+                  <div className="project-item-cta">
+                    {project.github && <a href={project.github} className="btn btn-shadow" target="_blank">Github</a>}
+                    {project.figma && <a href={project.figma} className="btn btn-shadow" target="_blank">Figma</a>}
                   </div>
-                </article>
-              )
-            })
-          }
-        </div>
+                </div>
+              </article>
+            )
+          })
+        }
       </div>
-    </section>
-  )
-}
-
+    </div>
+  </section>
+))
 export default Projects;
 

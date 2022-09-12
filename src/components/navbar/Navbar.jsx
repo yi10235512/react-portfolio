@@ -1,13 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 import "./navbar.css";
 import Hamburger from "./Hamburger";
 
-const Navbar = () => {
-  const scrollPosition = useScrollPosition();
+const Navbar = ({ offsets }) => {
 
+  const scrollPosition = useScrollPosition();
   const [activeNav, setActiveNav] = useState("#");
   const [click, setClick] = useState(false)
+
+  useEffect(() => {
+    if (scrollPosition >= offsets.aboutOffset && scrollPosition < offsets.skillsOffset) {
+      setActiveNav("#about")
+    } else if (scrollPosition >= offsets.skillsOffset && scrollPosition < offsets.projectsOffset) {
+      setActiveNav("#skills")
+    } else if (scrollPosition >= offsets.projectsOffset && scrollPosition < offsets.contactOffset) {
+      setActiveNav("#projects")
+    } else if (scrollPosition >= offsets.contactOffset) {
+      setActiveNav("#contact")
+    }
+  }, [scrollPosition])
 
   return (
     <div className={scrollPosition > 100 ? "header header-bg" : "header"}>
