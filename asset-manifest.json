@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.1e8d8821.css",
-    "main.js": "/react-portfolio/static/js/main.a7e0a02b.js",
-    "static/media/portfolio.png": "/react-portfolio/static/media/portfolio.027170602278fc42a9a3.png",
-    "static/media/bookerfly-1.png": "/react-portfolio/static/media/bookerfly-1.026091b5a0263ab9b913.png",
-    "static/media/nvim-config.png": "/react-portfolio/static/media/nvim-config.e198a390a5652e44e386.png",
+    "main.css": "/react-portfolio/static/css/main.ec884e92.css",
+    "main.js": "/react-portfolio/static/js/main.18bcd983.js",
     "static/media/avatar.jpeg": "/react-portfolio/static/media/avatar.f50bae8e805f034289f1.jpeg",
+    "static/media/project4.jpeg": "/react-portfolio/static/media/project4.3a4970a60ffb05571751.jpeg",
+    "static/media/project2.jpeg": "/react-portfolio/static/media/project2.b24ce961e28a2dab3fe2.jpeg",
+    "static/media/project3.jpeg": "/react-portfolio/static/media/project3.c060c708f4316d069712.jpeg",
+    "static/media/project1.jpeg": "/react-portfolio/static/media/project1.6f915d9707ffc2e48c62.jpeg",
     "index.html": "/react-portfolio/index.html",
-    "main.1e8d8821.css.map": "/react-portfolio/static/css/main.1e8d8821.css.map",
-    "main.a7e0a02b.js.map": "/react-portfolio/static/js/main.a7e0a02b.js.map"
+    "main.ec884e92.css.map": "/react-portfolio/static/css/main.ec884e92.css.map",
+    "main.18bcd983.js.map": "/react-portfolio/static/js/main.18bcd983.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e8d8821.css",
-    "static/js/main.a7e0a02b.js"
+    "static/css/main.ec884e92.css",
+    "static/js/main.18bcd983.js"
   ]
 }
